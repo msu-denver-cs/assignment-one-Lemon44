@@ -1,6 +1,10 @@
 # README
 
-I finished the project, and was commiting throughout the process but found that my assignment wasn't actually updating to this exact repository.  This led to not being able to show you accurate git difs.  Because of thise, I will try to explain what I did in detail here. 
+***I finished the project, and was commiting throughout the process but found that my assignment wasn't actually updating to this exact repository.  This led to not being able to show you accurate git difs.  Because of this, I will try to explain what I did in detail here. 
+
+***What I learned: I spent 20+ hours on this project and started over and over trying to get the structures and relationships correct.  I still ended up getting this wrong.  I consulted help and watched videos. I realized that getting things sorted ahead of starting the project saves a lot of time in the long run.  I also learned how the MVC works and have a better understanding of there interactions together. Writing the ruby code takes very little time, but structuring everything is extremely time-consuming. 
+
+***What I would have done differently:  MANY, MANY things.  I didn't structure the program correctly so I ended up trying to work with what I had.  And I didn't have my GitHub set up properly to work with RubyMine so that caused another big issue.  Next time I will practice more before starting the program. 
 
 rails new carsparts
 
@@ -34,4 +38,4 @@ rails generate model CarsParts car:references part:references
  
  -To appeal to the assignment specs this was added to the car form to implement a drop down menu of previously loaded and listed parts. 
  
- ***I was unable to link particular parts to specific models but intended on creating a make_num code that coincided with the make_num of the car model. Added other various style changes such as text fields and title changes. 
+ ***I was unable to link particular parts to specific models but intended on creating a make_num code that connected with the make_num of the car model. Added other various style changes such as text fields and title changes. 
