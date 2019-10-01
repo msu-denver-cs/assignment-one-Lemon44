@@ -28,12 +28,12 @@
 
   <div class="field">
     <%= form.label :vin  %>
-    <%= form.text_field :integer %>
+    <%= form.text_field :vin %>
   </div>
 
   <div class="field">
     <%=form.label :parts_id %>
-    <%=form.collection_select(:part_ids, @parts, :id, :name) %>
+    <%=form.collection_check_boxes(:part_ids, @parts, :id, :name) %>
   </div>
 
   <div class="actions">
