@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2019_10_03_200235) do
   create_table "cars", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "make_id"
+   # t.integer "make_id"
     t.integer "vin"
     t.index ["make_id"], name: "index_cars_on_make_id"
   end

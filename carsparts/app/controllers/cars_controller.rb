@@ -27,6 +27,8 @@ class CarsController < ApplicationController
   # POST /cars.json
   def create
     @car = Car.new(car_params)
+    @parts = Part.all 
+    
 
     respond_to do |format|
       if @car.save
