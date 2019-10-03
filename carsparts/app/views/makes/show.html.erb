@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Model name:</strong>
-  <%= @make.model_name %>
+  <strong>Manufacturer:</strong>
+  <%= @make.name %>
 </p>
 
 <p>
@@ -11,9 +11,17 @@
 </p>
 
 <p>
-  <strong>Car:</strong>
-  <%= @make.car %>
+  <strong>Model:</strong>
+  <%= @make.model %>
 </p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @make.year %>
+</p>
+
+
+  <strong>
 
 <%= link_to 'Edit', edit_make_path(@make) %> |
 <%= link_to 'Back', makes_path %>

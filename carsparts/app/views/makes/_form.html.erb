@@ -1,10 +1,10 @@
-<%= form_with(model: make, local: true) do |form| %>
-  <% if make.errors.any? %>
+<%= form_with(model: @make, local: true) do |form| %>
+  <% if @make.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(make.errors.count, "error") %> prohibited this make from being saved:</h2>
+      <h2><%= pluralize(@make.errors.count, "error") %> prohibited this make from being saved:</h2>
 
       <ul>
-      <% make.errors.full_messages.each do |message| %>
+      <% @make.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,19 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :model_name %>
-    <%= form.text_field :model_name %>
+    <%= form.label :manufacturer %>
+    <%= form.text_field :name %>
   </div>
 
-  <div class="field">
+    <div class="field">
     <%= form.label :country %>
     <%= form.text_field :country %>
   </div>
 
   <div class="field">
-    <%= form.label :car_id %>
-    <%= form.text_field :car_id %>
+    <%= form.label :model %>
+    <%= form.text_field :model %>
   </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.text_field :year %>
+  </div>
+
+
 
   <div class="actions">
     <%= form.submit %>
