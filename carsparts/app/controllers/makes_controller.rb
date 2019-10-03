@@ -69,6 +69,6 @@ class MakesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def make_params
-      params.require(:make).permit(:model_name, :country, :car_id)
+      params.require(:make).permit(:model_name, @makes, :country, :car_id=> [])
     end
 end
