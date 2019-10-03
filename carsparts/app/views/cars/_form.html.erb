@@ -11,12 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :model_id %>
-    <%= form.collection_check_boxes(:model_id, @models, :id, :model_name, :country) %>
-    </div>
-
-  <div class="field">
+    <div class="field">
     <%= form.label :vin  %>
     <%= form.text_field :vin %>
   </div>
