@@ -5,16 +5,6 @@
   <%= @part.name %>
 </p>
 
-<p>
-  <strong>Make ID:</strong>
-  <%= @part.make_num %>
-</p>
-
-<p>
-  <strong>Product ID:</strong>
-  <%= @part.product_num %>
-</p>
-
 <ul>
   <% @part.cars.each do |car| %>
   <li><%= car.name %></li>

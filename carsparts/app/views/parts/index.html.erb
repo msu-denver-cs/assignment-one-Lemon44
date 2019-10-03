@@ -6,8 +6,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Make ID</th>
-      <th>Product ID</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,8 +14,6 @@
     <% @parts.each do |part| %>
       <tr>
         <td><%= part.name %></td>
-        <td><%= part.make_num %></td>
-        <td><%= part.product_num %></t
         <td><%= link_to 'Show', part %></td>
         <td><%= link_to 'Edit', edit_part_path(part) %></td>
         <td><%= link_to 'Destroy', part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
