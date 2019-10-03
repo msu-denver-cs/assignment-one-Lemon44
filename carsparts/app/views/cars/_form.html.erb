@@ -12,19 +12,9 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :make %>
-    <%= form.text_field :make %>
-  </div>
-
-  <div class="field">
-    <%= form.label :model %>
-    <%= form.text_field :model %>
-  </div>
-
-  <div class="field">
-    <%= form.label :year %>
-    <%= form.text_field :year %>
-  </div>
+    <%= form.label :model_id %>
+    <%= form.collection_check_boxes(:model_id, @models, :id, :model_name, :country) %>
+    </div>
 
   <div class="field">
     <%= form.label :vin  %>
