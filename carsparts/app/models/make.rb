@@ -1,3 +1,3 @@
 class Make < ApplicationRecord
-  belongs_to :car
+  has_many :cars
 end
