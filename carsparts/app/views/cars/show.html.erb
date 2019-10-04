@@ -5,6 +5,13 @@
   <%= @car.vin %>
 </p>
 
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @make.name %>
+</p>
+
+
+
 <ul>
   <% @car.parts.each do |part| %>
   <li><%= part.name %></li>

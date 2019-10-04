@@ -11,7 +11,12 @@
     </div>
   <% end %>
 
-    <div class="field">
+  <div class="field">
+    <%= form.label :makes_id %>
+    <%= form.collection_check_boxes(:makes_ids, @makes, :id, :name) %>
+  </div>
+
+  <div class="field">
     <%= form.label :vin  %>
     <%= form.text_field :vin %>
   </div>
