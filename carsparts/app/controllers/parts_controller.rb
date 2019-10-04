@@ -9,18 +9,20 @@ class PartsController < ApplicationController
 
   # GET /parts/1
   # GET /parts/1.json
-  def show
+  def show 
   end
 
   # GET /parts/new
   def new
     @part = Part.new
     @cars = Car.all
+    @makes = Make.all
   end
 
   # GET /parts/1/edit
   def edit
     @cars = Car.all
+    @makes = Make.all
   end
 
   # POST /parts
@@ -71,6 +73,6 @@ class PartsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def part_params
-      params.require(:part).permit(:name, :car_id => [], :make_id => [])
+      params.require(:part).permit(:name, @makes, @cars, :car_id => [], :make_id => [])
     end
 end

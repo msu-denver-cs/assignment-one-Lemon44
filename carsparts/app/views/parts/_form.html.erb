@@ -16,6 +16,16 @@
     <%= form.text_field :name %>
   </div>
 
+   <div class="field">
+    <%= form.label :manufacturer %>
+    <%= form.collection_select(:make_id, @makes, :id, :name) %>
+  </div>
+
+<div class="field">
+    <%= form.label :model %>
+    <%= form.collection_select(:make_id, @makes, :id, :model) %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
