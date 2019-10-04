@@ -22,13 +22,14 @@ class PartsController < ApplicationController
   # GET /parts/1/edit
   def edit
     @cars = Car.all
-    @makes = Make.all
+    @make = Make.all
   end
 
   # POST /parts
   # POST /parts.json
   def create
     @part = Part.new(part_params)
+    @makes = Make.all
 
     respond_to do |format|
       if @part.save
