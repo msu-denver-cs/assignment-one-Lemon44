@@ -12,6 +12,9 @@ class PartsController < ApplicationController
   def show
   end
 
+  def search  
+  end
+
   # GET /parts/new
   def new
     @part = Part.new
