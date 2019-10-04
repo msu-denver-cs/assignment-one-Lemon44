@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_03_212712) do
+ActiveRecord::Schema.define(version: 2019_10_04_173917) do
 
   create_table "cars", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 2019_10_03_212712) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "make_id"
+    t.index ["make_id"], name: "index_parts_on_make_id"
   end
 
 end

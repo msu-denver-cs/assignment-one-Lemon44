@@ -2,7 +2,7 @@
 
 ***I finished the project, and was commiting throughout the process but found that my assignment wasn't actually updating to this exact repository.  This led to not being able to show you accurate git difs.  Because of this, I will try to explain what I did in detail here. 
 
-***What I learned: I spent 20+ hours on this project and started over and over trying to get the structures and relationships correct.  I still ended up getting this wrong.  I consulted help and watched videos. I realized that getting things sorted ahead of starting the project saves a lot of time in the long run.  I also learned how the MVC works and have a better understanding of there interactions together. Writing the ruby code takes very little time, but structuring everything is extremely time-consuming. 
+***What I learned: I spent 20+ hours on this project and started over and over trying to get the structures and relationships correct.  I still ended up getting this wrong.  I consulted help and watched videos. I realized that getting things sorted ahead of starting the project saves a lot of time in the long run.  I also learned how the MVC works and have a better understanding of their interactions together. Writing the ruby code takes very little time, but structuring everything is extremely time-consuming. 
 
 ***What I would have done differently:  MANY, MANY things.  I didn't structure the program correctly so I ended up trying to work with what I had.  And I didn't have my GitHub set up properly to work with RubyMine so that caused another big issue.  Next time I will practice more before starting the program. 
 
@@ -32,7 +32,7 @@ rails generate model CarsParts car:references part:references
  
  -Just to check what the html looked like from the auto-generated scaffold 
  
- ***At this time I modified the model, controller, and view to interact with each other much like in the library example. The app/model/car.rb and the app/model/part.rb files need to be modified to add the relationship part using has_and_belongs_to_many assignments. I also modified the form.html.erb files of both car and part model so that they displayed things in the correct manner.  I also modied the controller by adding links to 
+ ***At this time I modified the model, controller, and view to interact with each other much like in the library example. The app/model/car.rb and the app/model/part.rb files need to be modified to add the relationship part using has_and_belongs_to_many assignments. I also modified the form.html.erb files of both car and part model so that they displayed things in the correct manner.  I also modified the controller by adding links to 
  
  <%=form.collection_select(:part_ids, @parts, :id, :name) %>
  

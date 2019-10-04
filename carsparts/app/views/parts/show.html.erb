@@ -5,17 +5,5 @@
   <%= @part.name %>
 </p>
 
-<p>
-  <strong>Manufacturer:</strong>
-  <%= :manufacturer %></li>
-</p>
-
-
-<ul>
-  <% @part.cars.each do |car| %>
-  <li><%= car.name %></li>
-  <% end %>
-</ul>
-
 <%= link_to 'Edit', edit_part_path(@part) %> |
 <%= link_to 'Back', parts_path %>

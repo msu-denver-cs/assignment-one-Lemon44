@@ -10,32 +10,26 @@
       </ul>
     </div>
   <% end %>
-
+  
   <div class="field">
-    <%= form.label :make %>
-    <%= form.collection_select(:make_id, @makes, :id, :name) %>
+    <%= form.label :make_id %>
+    <%= form.collection_select :make_id, Make.all, :id, :name %>
   </div>
 
   <div class="field">
     <%= form.label :model %>
-    <%= form.collection_select(:make_id, @makes, :id, :model) %>
+    <%= form.collection_select :make_id, Make.all, :id, :model %>
   </div>
 
   <div class="field">
-    <%= form.label :year %>
-    <%= form.text_field :year %>
-  </div>
-
-  <div class="field">
-    <%= form.label :vin  %>
+    <%= form.label :vin %>
     <%= form.text_field :vin %>
   </div>
 
-  <br>
-
+  
   <div class="field">
-    <%=form.label :parts_id %>
-    <%=form.collection_check_boxes(:part_ids, @parts, :id, :name) %>
+    <%= form.label :part_id %>
+    <%= form.collection_check_boxes(:part_ids, Part.all, :id, :name) %>
   </div>
 
   <div class="actions">
