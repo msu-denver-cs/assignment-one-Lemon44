@@ -1,7 +1,20 @@
 require 'test_helper'
 
 class MakeTest < ActiveSupport::TestCase
-validates :name, length: { minimum: 2, maximum: 20 }
-validates :model, length: { minimum: 2, maximum: 20 }
-validates :year, 
+
+  test "for empty name" do
+    m = Make.create({:name => ""})
+    refute m.valid?
+    refute m.save
+    assert_equal({:name=>[": blank entry not allowed (minimum is 2 characters)"]},
+      p.errors.messages)
+  end
+
+  test "for one character name" do
+    m = Make.create({:name => "a"})
+    refute m.valid?
+    refute m.save
+    assert_equal({:name=>["is too short (minimum is 2 characters)"]},
+      p.errors.messages)
+  end
 end

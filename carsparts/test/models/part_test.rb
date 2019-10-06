@@ -6,7 +6,7 @@ class PartTest < ActiveSupport::TestCase
     p = Part.create({:name => ""})
     refute p.valid?
     refute p.save
-    assert_equal({:name=>["is too short (minimum is 2 characters)"]},
+    assert_equal({:name=>[":blank entry not allowed (minimum is 2 characters)"]},
       p.errors.messages)
   end
 
