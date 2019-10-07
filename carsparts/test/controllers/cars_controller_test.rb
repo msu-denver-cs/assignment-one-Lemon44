@@ -17,7 +17,7 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create car" do
     assert_difference('Car.count') do
-      post cars_url, params: { car: { country: @car.country, integer: @car.integer, make: @car.make, make_num: @car.make_num, model: @car.model, year: @car.year } }
+      post cars_url, params: { car: { vin: @car.vin } }
     end
 
     assert_redirected_to car_url(Car.last)
@@ -34,7 +34,7 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update car" do
-    patch car_url(@car), params: { car: { country: @car.country, integer: @car.integer, make: @car.make, make_num: @car.make_num, model: @car.model, year: @car.year } }
+    patch car_url(@car), params: { car: { vin: @car.vin } }
     assert_redirected_to car_url(@car)
   end
 

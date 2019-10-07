@@ -17,7 +17,7 @@ class MakesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create make" do
     assert_difference('Make.count') do
-      post makes_url, params: { make: { car_id: @make.car_id, country: @make.country, model_name: @make.model_name } }
+      post makes_url, params: { make: {country: @make.country, model: @make.mode, name: @make.name, year: @make.year } }
     end
 
     assert_redirected_to make_url(Make.last)
@@ -34,7 +34,7 @@ class MakesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update make" do
-    patch make_url(@make), params: { make: { car_id: @make.car_id, country: @make.country, model_name: @make.model_name } }
+    patch make_url(@make), params: { make: { country: @make.country, model: @make.model, name: @make.name, year: @make.year } }
     assert_redirected_to make_url(@make)
   end
 

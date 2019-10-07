@@ -1,11 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  model_name: MyString
+  model: MyString
+  name: MyString
   country: MyString
-  car: one
+  year: 1
 
 two:
-  model_name: MyString
+  model: MyString
+  name: MyString
   country: MyString
-  car: two
+  year: 1
+  
