@@ -73,4 +73,9 @@ class CarsController < ApplicationController
       def car_params
         params.require(:car).permit(:vin, :name, :model, :make_id, :part_ids => [])
       end
+
+      def search
+        @car = Car.where("vin like ?", "%#{params[:query]}%")
+        render :index
+      end
   end
